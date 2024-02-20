@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 function App() {
   const [name, setName] = useState("");
+  const [term, setTerm] = useState("");
 
   const handleClick = () => {
-
+    setTerm(name)
 
   }
 
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Hello {name} </h1>
+      <h1>Hello {term} </h1>
       <input type="text" placeholder="What's your name?" onChange={handleInput} />
       <button onClick={handleClick}>Submit</button>
     </div>
